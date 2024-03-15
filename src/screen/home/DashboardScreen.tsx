@@ -2,12 +2,13 @@ import type { RootState } from "../../app/store";
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment } from "../../features/counter/counterSlice";
 
-function App() {
+function DashboardScreen() {
   const count = useSelector((state: RootState) => state.counter.value);
 
   const dispatch = useDispatch();
   return (
     <div className="App">
+      <div className="block mx-auto">This is a Dashboard</div>
       <button
         aria-label="Increment value"
         onClick={() => dispatch(increment())}
@@ -25,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default DashboardScreen;
