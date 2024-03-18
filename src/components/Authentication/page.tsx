@@ -7,7 +7,7 @@ const Authentication = () => {
 
   const { token } = gettoken;
 
-  if (!token) return <Navigate to={"/test"} />;
+  if (!token) return <Navigate to={"/login"} />;
 
   return <Outlet />;
 };

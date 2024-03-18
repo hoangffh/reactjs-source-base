@@ -16,10 +16,14 @@ const tokenSlice = createSlice({
         // Action để set token
         setToken: (state, action) => {
             state.token = action.payload;
+            if (state.token) {
+                localStorage.setItem('token', state.token);
+            }
         },
         // Action để xóa token
         clearToken: (state) => {
             state.token = null;
+            localStorage.removeItem('token');
         },
     },
 });
